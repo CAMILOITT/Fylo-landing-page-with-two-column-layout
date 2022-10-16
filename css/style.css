@@ -37,13 +37,20 @@
       .header .header__main .main__information .information__form {
         width: 100%;
         display: flex;
-        gap: 10px; }
+        gap: 10px;
+        align-items: flex-start; }
         .header .header__main .main__information .information__form .form__email {
-          width: 255px;
-          padding: 10px;
-          border-radius: 5px;
-          outline: none;
-          border: 1px solid; }
+          display: flex;
+          flex-direction: column; }
+          .header .header__main .main__information .information__form .form__email .email__input {
+            width: 255px;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid; }
+          .header .header__main .main__information .information__form .form__email .email__validation {
+            color: red;
+            font-size: 0.8em; }
         .header .header__main .main__information .information__form .form__submit {
           width: 160px;
           padding: 12px;
@@ -51,7 +58,8 @@
           color: #f6f6fe;
           border: none;
           border-radius: 5px;
-          outline: none; }
+          outline: none;
+          cursor: pointer; }
     .header .header__main .main__illustration {
       width: 500px; }
 
@@ -115,11 +123,84 @@
     position: absolute;
     top: -75px;
     left: 0px; }
+.main .main__footer {
+  background: #585989;
+  color: white;
+  padding: 70px 80px 70px 50px;
+  display: flex;
+  justify-content: space-between; }
+  .main .main__footer .footer__information {
+    width: 450px; }
+    .main .main__footer .footer__information .information__title {
+      font-family: "Raleway", sans-serif;
+      margin-block-end: 1em;
+      color: #070439; }
+    .main .main__footer .footer__information .information__details {
+      font-size: 0.9em; }
+  .main .main__footer .footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; }
+    .main .main__footer .footer__form .form__email {
+      width: 300px;
+      padding: 5px;
+      border: none;
+      outline: none;
+      border-radius: 5px; }
+    .main .main__footer .footer__form .form__emailValidation {
+      font-size: 0.8em; }
+    .main .main__footer .footer__form .form__submit {
+      width: 180px;
+      padding: 10px;
+      background: #3065f8;
+      border: none;
+      outline: none;
+      color: white;
+      cursor: pointer; }
 
-.attribution {
-  font-size: 11px;
-  text-align: center; }
-  .attribution a {
-    color: #3e52a3; }
+.footer {
+  background: #070439;
+  padding: 80px 50px;
+  position: relative; }
+  .footer .footer__logo {
+    height: 35px;
+    margin-block-end: 20px; }
+  .footer .footer__about {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px 10px;
+    flex-wrap: wrap; }
+    .footer .footer__about .about__address .address__contact {
+      margin-block-end: 10px;
+      display: flex;
+      align-content: center;
+      gap: 20px; }
+    .footer .footer__about .about__about {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style: none; }
+    .footer .footer__about .about__social {
+      list-style: none;
+      display: flex;
+      gap: 20px; }
+      .footer .footer__about .about__social .social__icon {
+        width: 35px;
+        height: 35px; }
+  .footer .footer__attribution {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0; }
+    .footer .footer__attribution .attribution {
+      font-size: 13px;
+      text-align: center;
+      color: white; }
+      .footer .footer__attribution .attribution a {
+        color: #3c9f8f;
+        font-family: "Raleway", sans-serif;
+        text-decoration: none;
+        font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

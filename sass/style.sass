@@ -59,12 +59,19 @@ $fontFamilyOpenSans: 'Open Sans', sans-serif
         width: 100%
         display: flex
         gap: 10px
+        align-items: flex-start
         .form__email
-          width: 255px
-          padding: 10px
-          border-radius: 5px
-          outline: none
-          border: 1px solid
+          display: flex
+          flex-direction: column
+          .email__input
+            width: 255px
+            padding: 10px
+            border-radius: 5px
+            outline: none
+            border: 1px solid
+          .email__validation
+            color: red
+            font-size: .8em
         .form__submit
           width: 160px
           padding: 12px
@@ -73,6 +80,7 @@ $fontFamilyOpenSans: 'Open Sans', sans-serif
           border: none
           border-radius: 5px
           outline: none
+          cursor: pointer
     .main__illustration
       width: 500px
 
@@ -138,8 +146,84 @@ $fontFamilyOpenSans: 'Open Sans', sans-serif
       top: -75px
       left: 0px
 
-.attribution
-  font-size: 11px
-  text-align: center
-  a
-    color: hsl(228, 45%, 44%)
+  .main__footer
+    background: $DesaturatedBlue
+    color: white
+    padding: 70px 80px 70px 50px
+    display: flex
+    justify-content: space-between
+    .footer__information
+      width: 450px
+      .information__title
+        font-family: $fontFamilyRaleway
+        margin-block-end: 1em
+        color: $VeryDarkBlue
+      .information__details
+        font-size: .9em
+    .footer__form
+      display: flex
+      flex-direction: column
+      gap: 5px
+      .form__email
+        width: 300px
+        padding: 5px
+        border: none
+        outline: none
+        border-radius: 5px
+      .form__emailValidation
+        font-size: .8em
+
+      .form__submit
+        width: 180px
+        padding: 10px
+        background: $BrightBlue
+        border: none
+        outline: none
+        color: white
+        cursor: pointer
+
+.footer
+  background: $VeryDarkBlue
+  padding: 80px 50px
+  position: relative
+  .footer__logo
+    height: 35px
+    margin-block-end: 20px
+  .footer__about
+    color: white
+    display: flex
+    justify-content: space-between
+    gap: 30px 10px
+    flex-wrap: wrap
+    .about__address
+      .address__contact
+        margin-block-end: 10px
+        display: flex
+        align-content: center
+        gap: 20px
+    .about__about
+      display: flex
+      flex-direction: column
+      gap: 20px
+      list-style: none
+    .about__social
+      list-style: none
+      display: flex
+      gap: 20px
+      .social__icon
+        width: 35px
+        height: 35px
+  .footer__attribution
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+    .attribution
+      font-size: 13px
+      text-align: center
+      color: white
+      a
+        color: $ModerateCyan
+        font-family: $fontFamilyRaleway
+        text-decoration: none
+        font-weight: bold
